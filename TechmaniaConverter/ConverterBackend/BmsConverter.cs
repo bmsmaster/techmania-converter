@@ -119,8 +119,8 @@ namespace ConverterBackend
 
                 // Sound file command: record index and filename.
                 if (command.Length == 6 && (
-                    Regex.IsMatch(command, @"#WAV[A-Z0-9][A-Z0-9]") ||
-                    Regex.IsMatch(command, @"#OGG[A-Z0-9][A-Z0-9]")))
+                    Regex.IsMatch(command, @"#WAV[A-Za-z0-9][A-Za-z0-9]") ||
+                    Regex.IsMatch(command, @"#OGG[A-Za-z0-9][A-Za-z0-9]")))
                 {
                     string fileIndex = command.Substring(4, 2);
                     string filename = FindFile(remainder);
